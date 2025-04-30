@@ -2109,6 +2109,27 @@ html {
     100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Logo Image Styles */
+.logo-img {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--space-xs);
+}
+
+.logo-img.small {
+    width: 35px;
+    height: 35px;
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1200px) {
     :root {
@@ -2204,6 +2225,15 @@ html {
     .footer-about {
         grid-column: 1;
     }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
     
     .footer-bottom {
         flex-direction: column;
@@ -2238,12 +2268,33 @@ html {
     }
     
     /* For very small screens, adjust floating elements */
+    .phone-mockup {
+        max-width: 260px;
+    }
+    
+    .float-element {
+        transform: scale(0.9);
+    }
+    
     .alert-notification {
-        right: -20px;
-        min-width: 180px;
+        top: 5%;
+        right: -15px;
+        min-width: 170px;
     }
     
     .stat-card {
+        bottom: 55%;
         right: -25px;
+    }
+    
+    .location-pulse {
+        bottom: 15%;
+        left: -15px;
+    }
+}
+
+@-moz-document url-prefix() {
+    .logo-image {
+        width: 100%;
     }
 }
