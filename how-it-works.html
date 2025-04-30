@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - BlinkAlert</title>
+    <meta name="description" content="Learn how BlinkAlert works to keep you safe with emergency alerts and location sharing technology.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts - Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow"></div>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                            <!-- Eye shape with smoother curve -->
+                            <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                            <!-- Refined iris -->
+                            <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                            <!-- Refined target cross -->
+                            <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                            <!-- Center dot -->
+                            <circle cx="512" cy="512" r="15" fill="white"/>
+                            <!-- Symmetrical signal waves -->
+                            <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
+                    <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="mode-toggle">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cta-button">
+                    <a href="#download" class="btn primary-btn">Get the App</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="close-menu">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html" class="active">How It Works</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="#download" class="btn primary-btn">Download App</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">How <span class="gradient-text">BlinkAlert</span> Works</h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">From setup to emergency response, discover how our system helps keep you safe.</p>
+            </div>
+        </section>
+
+        <section class="process-flow">
+            <div class="container">
+                <div class="process-timeline" data-aos="fade-up">
+                    <div class="timeline-progress">
+                        <div class="timeline-progress-bar"></div>
+                    </div>
+                    
+                    <div class="timeline-node active" data-step="1">
+                        <div class="node-number">1</div>
+                        <div class="node-label">Download & Setup</div>
+                    </div>
+                    
+                    <div class="timeline-node" data-step="2">
+                        <div class="node-number">2</div>
+                        <div class="node-label">Add Emergency Contacts</div>
+                    </div>
+                    
+                    <div class="timeline-node" data-step="3">
+                        <div class="node-number">3</div>
+                        <div class="node-label">Configure Alert Settings</div>
+                    </div>
+                    
+                    <div class="timeline-node" data-step="4">
+                        <div class="node-number">4</div>
+                        <div class="node-label">Emergency Alert Activation</div>
+                    </div>
+                    
+                    <div class="timeline-node" data-step="5">
+                        <div class="node-number">5</div>
+                        <div class="node-label">Contact Notification</div>
+                    </div>
+                    
+                    <div class="timeline-node" data-step="6">
+                        <div class="node-number">6</div>
+                        <div class="node-label">Location Tracking</div>
+                    </div>
+                </div>
+
+                <div class="process-content">
+                    <div class="process-step active" data-step="1" data-aos="fade-up">
+                        <div class="step-details">
+                            <h2>Download & Setup</h2>
+                            <p>Get started with BlinkAlert in just a few simple steps to ensure you're protected when you need it most.</p>
+                            <ol class="step-list">
+                                <li>Download the BlinkAlert app from Google Play Store</li>
+                                <li>Create your account with basic information</li>
+                                <li>Verify your email address and phone number</li>
+                                <li>Grant necessary permissions for the app to function effectively</li>
+                            </ol>
+                            <div class="step-cta">
+                                <a href="#download" class="btn primary-btn">
+                                    <span class="btn-content">
+                                        <i class="fas fa-download"></i>
+                                        <span>Download Now</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <div class="phone-visual">
+                                <img src="images/screenshots/app-home.jpg" alt="BlinkAlert setup screen" />
+                                <div class="phone-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="2">
+                        <div class="step-details">
+                            <h2>Add Emergency Contacts</h2>
+                            <p>Configure who gets notified when you trigger an emergency alert.</p>
+                            <ol class="step-list">
+                                <li>Add contacts from your phone or manually enter information</li>
+                                <li>Prioritize contacts in order of notification</li>
+                                <li>Send invitation links to contacts to download the app</li>
+                                <li>Specify which information each contact can access</li>
+                            </ol>
+                            <div class="info-box">
+                                <div class="info-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <p>Premium users can add up to 6 emergency contacts, while free users can add 1 contact.</p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <div class="phone-visual">
+                                <img src="images/screenshots/settings-screen.jpg" alt="Alert settings configuration" />
+                                <div class="phone-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="3">
+                        <div class="step-details">
+                            <h2>Configure Alert Settings</h2>
+                            <p>Customize how you can trigger alerts and what information is shared during emergencies.</p>
+                            <ol class="step-list">
+                                <li>Select which alert trigger methods you want to use (shake, pattern, voice, etc.)</li>
+                                <li>Customize alert messages for different scenarios</li>
+                                <li>Configure location sharing settings</li>
+                                <li>Set up Safe Words for alert cancellation</li>
+                            </ol>
+                            <div class="tip-box">
+                                <div class="tip-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <p>We recommend setting up multiple alert trigger methods to ensure you can always activate an alert regardless of the situation.</p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <div class="phone-visual">
+                                <img src="images/screenshots/settings-screen.jpg" alt="Alert settings configuration" />
+                                <div class="phone-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="4">
+                        <div class="step-details">
+                            <h2>Emergency Alert Activation</h2>
+                            <p>When you need help, BlinkAlert makes it quick and easy to send alerts using multiple methods.</p>
+                            <div class="trigger-methods">
+                                <div class="trigger-method">
+                                    <div class="trigger-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h3>Shake Activation</h3>
+                                    <p>Rapidly shake your phone to trigger an alert</p>
+                                </div>
+                                <div class="trigger-method">
+                                    <div class="trigger-icon">
+                                        <i class="fas fa-volume-up"></i>
+                                    </div>
+                                    <h3>Voice Command</h3>
+                                    <p>Use your custom voice command to activate</p>
+                                </div>
+                                <div class="trigger-method">
+                                    <div class="trigger-icon">
+                                        <i class="fas fa-fingerprint"></i>
+                                    </div>
+                                    <h3>Pattern Press</h3>
+                                    <p>Press volume buttons in your defined pattern</p>
+                                </div>
+                                <div class="trigger-method">
+                                    <div class="trigger-icon">
+                                        <i class="fas fa-hand-paper"></i>
+                                    </div>
+                                    <h3>Manual Trigger</h3>
+                                    <p>Press the emergency button in the app</p>
+                                </div>
+                            </div>
+                            <div class="warning-box">
+                                <div class="warning-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <p>If you accidentally trigger an alert, you can quickly cancel it using your Safe Word or the cancellation button within the first 10 seconds.</p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <div class="phone-visual">
+                                <img src="/api/placeholder/300/600" alt="Emergency activation screen" />
+                                <div class="phone-shine"></div>
+                                <div class="alert-animation">
+                                    <div class="pulse-ring"></div>
+                                    <div class="pulse-ring"></div>
+                                    <div class="pulse-ring"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="5">
+                        <div class="step-details">
+                            <h2>Contact Notification</h2>
+                            <p>When an alert is triggered, BlinkAlert immediately notifies your emergency contacts through multiple channels.</p>
+                            <div class="notification-methods">
+                                <div class="notification-method">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <h3>App Notification</h3>
+                                    <p>Instant in-app alert with location map</p>
+                                </div>
+                                <div class="notification-method">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-sms"></i>
+                                    </div>
+                                    <h3>SMS Message</h3>
+                                    <p>Text message with emergency details</p>
+                                </div>
+                                <div class="notification-method">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <h3>Email Alert</h3>
+                                    <p>Detailed email with location link</p>
+                                </div>
+                                <div class="notification-method">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <h3>Phone Call</h3>
+                                    <p>Automated call for urgent situations</p>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <div class="info-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <p>Contacts will receive notifications in priority order. If the primary contact doesn't respond within 2 minutes, the system will notify the next contact.</p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <div class="notification-visuals">
+                                <div class="notification-card">
+                                    <div class="notification-header">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>EMERGENCY ALERT</span>
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><strong>Sarah needs your help!</strong></p>
+                                        <p>Location: 12 Smuts Avenue, Vereeniging</p>
+                                        <div class="notification-time">Just now</div>
+                                    </div>
+                                </div>
+                                <div class="notification-card sms">
+                                    <div class="sms-header">
+                                        <span>SMS</span>
+                                    </div>
+                                    <div class="sms-body">
+                                        <p>BLINKALERT EMERGENCY: Sarah has triggered an emergency alert. Last known location: 12 Smuts Avenue, Vereeniging. View map: https://bl.ink/alert/sf7d3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="6">
+                        <div class="step-details">
+                            <h2>Location Tracking</h2>
+                            <p>After an alert is sent, BlinkAlert continues to update your location so contacts can provide the most effective help.</p>
+                            <ol class="step-list">
+                                <li>Real-time location updates are sent to emergency contacts</li>
+                                <li>Location history is tracked to show your movement</li>
+                                <li>Contacts can view your location on an interactive map</li>
+                                <li>Location tracking continues until the alert is resolved</li>
+                            </ol>
+                            <div class="success-box">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p>Once help arrives or the situation is resolved, you or your emergency contacts can mark the alert as resolved, stopping location tracking.</p>
+                            </div>
+                        </div>
+                        <div class="step-visual">
+                            <div class="map-visual">
+                                <div class="map-container">
+                                    <img src="/api/placeholder/400/300" alt="Location tracking map" />
+                                    <div class="location-marker">
+                                        <div class="marker-dot"></div>
+                                        <div class="marker-pulse"></div>
+                                    </div>
+                                    <div class="location-path"></div>
+                                </div>
+                                <div class="map-controls">
+                                    <div class="map-status">
+                                        <span class="status-dot active"></span>
+                                        <span>Live Tracking</span>
+                                    </div>
+                                    <div class="map-time">Updated: Just now</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Questions & Answers</span>
+                    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                    <p class="section-subtitle">Everything you need to know about using BlinkAlert</p>
+                </div>
+
+                <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Does BlinkAlert work without an internet connection?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, BlinkAlert has an offline mode available for Premium users. When your phone is offline, the app will queue emergency alerts and send them as soon as connectivity is restored. The app will also use SMS as a backup method for critical alerts when data connectivity is unavailable.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How accurate is the location tracking?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>BlinkAlert uses a combination of GPS, cellular networks, and WiFi positioning to provide the most accurate location possible. In optimal conditions, location accuracy is within 5-10 meters. In areas with poor GPS signal, accuracy may decrease but the system will indicate the accuracy radius on the map.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Will BlinkAlert drain my battery?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>BlinkAlert is designed to be battery-efficient during normal usage. The app uses minimal resources when running in the background and only activates intensive features like continuous location tracking during an active emergency. For longer battery life, you can adjust the location update frequency in the settings.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I test the alert system without notifying my contacts?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, BlinkAlert includes a Test Mode feature that allows you to verify that all alert mechanisms are working properly without sending actual notifications to your emergency contacts. To use Test Mode, go to Settings &gt; Test Alert System and follow the instructions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What happens if I accidentally trigger an alert?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If you accidentally trigger an alert, you have 10 seconds to cancel it before notifications are sent to your contacts. Simply tap the "Cancel Alert" button that appears after triggering. If notifications have already been sent, you can still cancel the alert by entering your Safe Word (Premium users) or by selecting "False Alarm" in the active alert screen.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is BlinkAlert available for iPhone?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>BlinkAlert is currently available only for Android devices. We are actively developing an iOS version that will be available in the Apple App Store soon. Sign up on our website to be notified when the iOS version is released.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-bg"></div>
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="section-title">Ready to feel safer?</h2>
+                    <p class="section-subtitle">Download BlinkAlert today and get peace of mind for you and your loved ones.</p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="btn primary-btn">
+                            <span class="btn-content">
+                                <i class="fas fa-download"></i>
+                                <span>Get Started</span>
+                            </span>
+                        </a>
+                        <a href="contact.html" class="btn outline-btn light">
+                            <span class="btn-content">
+                                <i class="fas fa-headset"></i>
+                                <span>Contact Support</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download" id="download">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tagline">Get Started</span>
+                    <h2 class="section-title">Download <span class="gradient-text">BlinkAlert</span> Today</h2>
+                    <p class="section-subtitle">Available for Android devices. iOS coming soon.</p>
+                </div>
+                <div class="download-options">
+                    <div class="download-app" data-aos="fade-right">
+                        <div class="download-buttons">
+                            <a href="#" class="store-button google-play">
+                                <i class="fab fa-google-play"></i>
+                                <div class="store-text">
+                                    <span class="small-text">GET IT ON</span>
+                                    <span class="big-text">Google Play</span>
+                                </div>
+                            </a>
+                            <a href="#" class="store-button app-store disabled">
+                                <i class="fab fa-apple"></i>
+                                <div class="store-text">
+                                    <span class="small-text">COMING SOON TO</span>
+                                    <span class="big-text">App Store</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="download-qr" data-aos="fade-left">
+                        <div class="qr-code">
+                            <img src="/api/placeholder/180/180" alt="QR Code to download BlinkAlert" />
+                        </div>
+                        <p>Scan QR code to download</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="0.1" d="M0,256L48,240C96,224,192,192,288,186.7C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                                <!-- Eye shape with smoother curve -->
+                                <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                                <!-- Refined iris -->
+                                <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                                <!-- Refined target cross -->
+                                <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                                <!-- Center dot -->
+                                <circle cx="512" cy="512" r="15" fill="white"/>
+                                <!-- Symmetrical signal waves -->
+                                <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                    </div>
+                    <p>BlinkAlert provides peace of mind through innovative emergency alert solutions, keeping you connected when it matters most.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BlinkAlert</title>
+    <meta name="description" content="Get in touch with the BlinkAlert team for support, partnerships, or general inquiries about our personal safety app.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts - Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow"></div>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                            <!-- Eye shape with smoother curve -->
+                            <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                            <!-- Refined iris -->
+                            <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                            <!-- Refined target cross -->
+                            <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                            <!-- Center dot -->
+                            <circle cx="512" cy="512" r="15" fill="white"/>
+                            <!-- Symmetrical signal waves -->
+                            <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link">Features</a></li>
+                    <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                    <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="mode-toggle">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cta-button">
+                    <a href="#download" class="btn primary-btn">Get the App</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="close-menu">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="#download" class="btn primary-btn">Download App</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Contact <span class="gradient-text">Us</span></h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">We're here to help with any questions or support you need.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid" data-aos="fade-up">
+                    <div class="contact-info">
+                        <div class="section-header">
+                            <span class="section-tagline">Get In Touch</span>
+                            <h2 class="section-title">How Can We <span class="gradient-text">Help?</span></h2>
+                            <p class="section-subtitle">Our team is ready to assist you with any questions or concerns.</p>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Call Us</h3>
+                                    <p>Our support team is available Monday to Friday, 8AM - 6PM (SAST)</p>
+                                    <a href="tel:+27769575352" class="contact-link">+27 76 957 5352</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email Us</h3>
+                                    <p>For general inquiries and support questions</p>
+                                    <a href="mailto:info@blinkalert.co.za" class="contact-link">info@blinkalert.co.za</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Partnerships</h3>
+                                    <p>Interested in partnering with BlinkAlert?</p>
+                                    <a href="mailto:partners@blinkalert.co.za" class="contact-link">partners@blinkalert.co.za</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Visit Us</h3>
+                                    <p>12 Smuts Avenue<br>Vereeniging, South Africa<br>1939</p>
+                                    <a href="https://maps.app.goo.gl/your-location" target="_blank" class="contact-link">View on Map</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-connect">
+                            <h3>Connect With Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h2>Send a Message</h2>
+                                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                            </div>
+                            
+                            <form class="contact-form" id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number (Optional)</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-phone"></i>
+                                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-tag"></i>
+                                        <select id="subject" name="subject" required>
+                                            <option value="" disabled selected>Select a subject</option>
+                                            <option value="general">General Inquiry</option>
+                                            <option value="support">Technical Support</option>
+                                            <option value="partnership">Partnership Opportunity</option>
+                                            <option value="feedback">App Feedback</option>
+                                            <option value="billing">Billing & Subscription</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                                </div>
+                                
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">I agree to the <a href="privacy.html">Privacy Policy</a> and consent to the processing of my data.</label>
+                                </div>
+                                
+                                <div class="form-submit">
+                                    <button type="submit" class="btn primary-btn">
+                                        <span class="btn-content">
+                                            <i class="fas fa-paper-plane"></i>
+                                            <span>Send Message</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <div class="form-success" style="display: none;">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Message Sent!</h3>
+                                <p>Thank you for contacting us. We'll get back to you as soon as possible.</p>
+                                <button class="btn outline-btn" id="sendAnother">Send Another Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section" data-aos="fade-up">
+            <div class="container">
+                <div class="map-container">
+                    <img src="/api/placeholder/1200/400" alt="Map location of BlinkAlert offices" class="map-image">
+                    <div class="map-overlay">
+                        <div class="map-card">
+                            <h3>BlinkAlert Headquarters</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 12 Smuts Avenue, Vereeniging, 1939</p>
+                            <p><i class="fas fa-clock"></i> Monday - Friday: 8AM - 6PM</p>
+                            <a href="https://maps.app.goo.gl/your-location" target="_blank" class="btn outline-btn">
+                                <span class="btn-content">
+                                    <i class="fas fa-directions"></i>
+                                    <span>Get Directions</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section compact" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Common Questions</span>
+                    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                    <p class="section-subtitle">Find quick answers to common inquiries about BlinkAlert</p>
+                </div>
+
+                <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I report a technical issue with the app?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For technical issues, you can report the problem directly from within the app by going to Settings > Help & Support > Report a Problem. Alternatively, you can email our support team at support@blinkalert.co.za with details about the issue you're experiencing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does it usually take to get a response?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We aim to respond to all inquiries within 24-48 hours during business days. For urgent matters related to the app's functionality, our premium support team is available for faster response times.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I cancel or modify my subscription?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can manage your subscription directly through your Google Play account. Go to Google Play Store > Account > Subscriptions > BlinkAlert, and from there you can cancel or modify your subscription. If you need assistance, contact our billing team at billing@blinkalert.co.za.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I become a security partner for BlinkAlert?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we're always looking to expand our security partner network. If you represent a security company or emergency response service, please contact our partnerships team at partners@blinkalert.co.za with information about your company and service area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-bg"></div>
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="section-title">Ready to feel safer?</h2>
+                    <p class="section-subtitle">Download BlinkAlert today and get peace of mind for you and your loved ones.</p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="btn primary-btn">
+                            <span class="btn-content">
+                                <i class="fas fa-download"></i>
+                                <span>Get Started</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download" id="download">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tagline">Get Started</span>
+                    <h2 class="section-title">Download <span class="gradient-text">BlinkAlert</span> Today</h2>
+                    <p class="section-subtitle">Available for Android devices. iOS coming soon.</p>
+                </div>
+                <div class="download-options">
+                    <div class="download-app" data-aos="fade-right">
+                        <div class="download-buttons">
+                            <a href="#" class="store-button google-play">
+                                <i class="fab fa-google-play"></i>
+                                <div class="store-text">
+                                    <span class="small-text">GET IT ON</span>
+                                    <span class="big-text">Google Play</span>
+                                </div>
+                            </a>
+                            <a href="#" class="store-button app-store disabled">
+                                <i class="fab fa-apple"></i>
+                                <div class="store-text">
+                                    <span class="small-text">COMING SOON TO</span>
+                                    <span class="big-text">App Store</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="download-qr" data-aos="fade-left">
+                        <div class="qr-code">
+                            <img src="/api/placeholder/180/180" alt="QR Code to download BlinkAlert" />
+                        </div>
+                        <p>Scan QR code to download</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="0.1" d="M0,256L48,240C96,224,192,192,288,186.7C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                                <!-- Eye shape with smoother curve -->
+                                <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                                <!-- Refined iris -->
+                                <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                                <!-- Refined target cross -->
+                                <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                                <!-- Center dot -->
+                                <circle cx="512" cy="512" r="15" fill="white"/>
+                                <!-- Symmetrical signal waves -->
+                                <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                    </div>
+                    <p>BlinkAlert provides peace of mind through innovative emergency alert solutions, keeping you connected when it matters most.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="mailto:info@blinkalert.co.za"><i class="fas fa-envelope"></i> info@blinkalert.co.za</a></li>
+                        <li><a href="tel:+27769575352"><i class="fas fa-phone"></i> +27 76 957 5352</a></li>
+                        <li><a href="https://maps.app.goo.gl/your-location" target="_blank"><i class="fas fa-map-marker-alt"></i> 12 Smuts Avenue, Vereeniging</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 BlinkAlert. All rights reserved. Developed and Managed by DotConnect Academy Pty Ltd.</p>
+                </div>
+                <div class="footer-app-links">
+                    <a href="#" class="app-link">
+                        <i class="fab fa-android"></i> Android App
+                    </a>
+                    <a href="#" class="app-link disabled">
+                        <i class="fab fa-apple"></i> iOS (Coming Soon)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

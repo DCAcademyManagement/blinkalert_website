@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BlinkAlert</title>
+    <meta name="description" content="BlinkAlert privacy policy - How we protect your data and respect your privacy.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts - Outfit and Inter to match main site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Privacy Page Specific Styles -->
+    <style>
+/* Modern Privacy Policy Styles */
+
+/* Page Header Section */
+.page-header {
+    background: var(--primary-gradient);
+    color: white;
+    padding: var(--space-2xl) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='white' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    z-index: 0;
+}
+
+.page-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-md);
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+}
+
+.page-description {
+    max-width: 700px;
+    margin: 0 auto var(--space-md);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.last-updated {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    margin-top: var(--space-sm);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Privacy Content */
+.privacy-content {
+    padding: var(--space-2xl) 0;
+    background-color: var(--light);
+}
+
+.dark-theme .privacy-content {
+    background-color: var(--dark-blue);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-lg-4, .col-lg-8 {
+    padding: 0 15px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        width: 33.333333%;
+    }
+    .col-lg-8 {
+        width: 66.666667%;
+    }
+}
+
+/* Table of Contents */
+.toc {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 100px;
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--glass-border);
+}
+
+.dark-theme .toc {
+    background-color: var(--dark-blue);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.toc-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list li {
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-xs);
+    border-left: 2px solid transparent;
+    transition: all var(--transition-normal);
+}
+
+.toc-list li:hover {
+    border-left-color: var(--primary);
+}
+
+.toc-list a {
+    display: block;
+    padding: var(--space-2xs) 0;
+    color: var(--dark);
+    font-size: 0.95rem;
+    transition: color var(--transition-normal);
+    text-decoration: none;
+}
+
+.dark-theme .toc-list a {
+    color: var(--gray-light);
+}
+
+.toc-list a:hover {
+    color: var(--primary);
+}
+
+/* Consent Controls */
+.consent-controls {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--glass-border);
+}
+
+.dark-theme .consent-controls {
+    background-color: var(--dark-blue);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.consent-controls h3 {
+    margin-bottom: var(--space-md);
+    color: var(--dark);
+    font-size: 1.4rem;
+}
+
+.consent-controls > p {
+    margin-bottom: var(--space-md);
+    color: var(--gray-dark);
+}
+
+.consent-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.dark-theme .consent-item {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.consent-item:last-child {
+    border-bottom: none;
+}
+
+.consent-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex: 1;
+}
+
+.consent-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--primary-gradient);
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-primary);
+}
+
+.consent-info h4 {
+    margin-bottom: var(--space-2xs);
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+.consent-info p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.consent-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.consent-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray-light);
+    transition: var(--transition-normal);
+    border-radius: var(--radius-full);
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: var(--transition-normal);
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background: var(--primary-gradient);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+.note {
+    margin-top: var(--space-md);
+    color: var(--gray);
+    font-style: italic;
+}
+
+/* Privacy Sections */
+.privacy-section {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    border: 1px solid var(--glass-border);
+}
+
+.dark-theme .privacy-section {
+    background-color: var(--dark-blue);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.privacy-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.privacy-section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.privacy-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--primary-gradient);
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-primary);
+}
+
+.privacy-section-title {
+    margin-bottom: 0;
+    color: var(--dark);
+    font-size: 1.5rem;
+}
+
+.privacy-text {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.privacy-section h4 {
+    color: var(--primary);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+    font-size: 1.2rem;
+}
+
+.privacy-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.bullet-icon {
+    color: var(--primary);
+    font-size: 1rem;
+    margin-top: 3px;
+}
+
+.privacy-bullet span {
+    flex: 1;
+    color: var(--gray-dark);
+}
+
+.company-info {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px dashed var(--gray-light);
+}
+
+/* Active Section Highlighting */
+:target {
+    scroll-margin-top: 100px;
+}
+
+.privacy-section:target {
+    border-left: 4px solid var(--primary);
+}
+
+/* Animation for section transitions */
+.privacy-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.privacy-section:nth-child(1) { animation-delay: 0.1s; }
+.privacy-section:nth-child(2) { animation-delay: 0.2s; }
+.privacy-section:nth-child(3) { animation-delay: 0.3s; }
+.privacy-section:nth-child(4) { animation-delay: 0.4s; }
+.privacy-section:nth-child(5) { animation-delay: 0.5s; }
+.privacy-section:nth-child(6) { animation-delay: 0.6s; }
+.privacy-section:nth-child(7) { animation-delay: 0.7s; }
+.privacy-section:nth-child(8) { animation-delay: 0.8s; }
+.privacy-section:nth-child(9) { animation-delay: 0.9s; }
+.privacy-section:nth-child(10) { animation-delay: 1s; }
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .toc {
+        position: static;
+        margin-bottom: var(--space-lg);
+    }
+    
+    .privacy-section {
+        padding: var(--space-md);
+    }
+    
+    .privacy-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .privacy-section-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .consent-label {
+        gap: var(--space-sm);
+    }
+    
+    .consent-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .privacy-section-header {
+        gap: var(--space-sm);
+    }
+    
+    .privacy-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .page-header {
+        padding: var(--space-xl) 0;
+    }
+    
+    .consent-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+    
+    .consent-toggle {
+        margin-left: 65px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                            <!-- Eye shape with smoother curve -->
+                            <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                            <!-- Refined iris -->
+                            <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                            <!-- Refined target cross -->
+                            <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                            <!-- Center dot -->
+                            <circle cx="512" cy="512" r="15" fill="white"/>
+                            <!-- Symmetrical signal waves -->
+                            <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="privacy.html" class="active">Privacy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="mode-toggle">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cta-button">
+                    <a href="index.html#download" class="btn primary-btn">Download App</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="close-menu">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="privacy.html" class="active">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="index.html#download" class="btn primary-btn">Download App</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-description">At BlinkAlert, protecting your privacy is fundamental to our service. We are committed to being transparent about how we collect, use, and protect your data.</p>
+            <div class="last-updated">Last Updated: April 29, 2025</div>
+        </div>
+    </section>
+
+    <section class="privacy-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="toc">
+                        <h3 class="toc-title"><i class="fas fa-list"></i> Contents</h3>
+                        <ul class="toc-list">
+                            <li><a href="#introduction">1. Introduction</a></li>
+                            <li><a href="#information-we-collect">2. Information We Collect</a></li>
+                            <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                            <li><a href="#information-sharing">4. Information Sharing</a></li>
+                            <li><a href="#data-security">5. Data Security</a></li>
+                            <li><a href="#your-rights">6. Your Rights</a></li>
+                            <li><a href="#location-services">7. Location Services</a></li>
+                            <li><a href="#emergency-alerts">8. Emergency Alerts</a></li>
+                            <li><a href="#data-retention">9. Data Retention</a></li>
+                            <li><a href="#contact-us">10. Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="consent-controls">
+                        <h3>Your Privacy Controls</h3>
+                        <p>Manage how your data is used by adjusting these settings:</p>
+
+                        <div class="consent-item">
+                            <div class="consent-label">
+                                <div class="consent-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <div class="consent-info">
+                                    <h4>Personal Data Processing</h4>
+                                    <p>Allow processing of personal information for emergency services</p>
+                                </div>
+                            </div>
+                            <div class="consent-toggle">
+                                <input type="checkbox" id="personal-data" checked>
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+
+                        <div class="consent-item">
+                            <div class="consent-label">
+                                <div class="consent-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="consent-info">
+                                    <h4>Location Tracking</h4>
+                                    <p>Share your location during emergency situations</p>
+                                </div>
+                            </div>
+                            <div class="consent-toggle">
+                                <input type="checkbox" id="location-tracking" checked>
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+
+                        <div class="consent-item">
+                            <div class="consent-label">
+                                <div class="consent-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="consent-info">
+                                    <h4>Marketing Communications</h4>
+                                    <p>Receive updates, tips and promotional content</p>
+                                </div>
+                            </div>
+                            <div class="consent-toggle">
+                                <input type="checkbox" id="marketing">
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+
+                        <div class="consent-item">
+                            <div class="consent-label">
+                                <div class="consent-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="consent-info">
+                                    <h4>Data Sharing</h4>
+                                    <p>Share anonymized data for service improvement</p>
+                                </div>
+                            </div>
+                            <div class="consent-toggle">
+                                <input type="checkbox" id="data-sharing">
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                        
+                        <p class="note"><small>Note: These controls simulate the consent management functionality available in the BlinkAlert app. Adjusting these settings on this website does not affect your actual BlinkAlert app settings.</small></p>
+                    </div>
+
+                    <div class="privacy-section" id="introduction">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="privacy-section-title">1. Introduction</h3>
+                        </div>
+                        <p class="privacy-text">
+                            At BlinkAlert, protecting your privacy is fundamental to our service. This Privacy Policy 
+                            explains how we collect, use, and protect your personal information when you use our 
+                            emergency alert and personal safety application.
+                        </p>
+                        <p class="privacy-text">
+                            We understand the sensitive nature of the data involved in emergency services and are 
+                            committed to maintaining your trust by being transparent about our data practices and 
+                            providing you with meaningful control over your information.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section" id="information-we-collect">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="privacy-section-title">2. Information We Collect</h3>
+                        </div>
+                        
+                        <h4>2.1 Personal Information</h4>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Full name and contact details</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Emergency contact information</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Profile information and photographs</span>
+                        </div>
+                        
+                        <h4>2.2 Location Data</h4>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Real-time location during emergencies</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Location history when tracking is enabled</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Background location updates for emergency services</span>
+                        </div>
+                        
+                        <h4>2.3 Device Information</h4>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Device type and operating system</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Unique device identifiers</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Motion and sensor data for alert detection</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="how-we-use">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3 class="privacy-section-title">3. How We Use Your Information</h3>
+                        </div>
+                        
+                        <h4>3.1 Emergency Response</h4>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Alert transmission to emergency contacts</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Coordination with security partners</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Location sharing during emergencies</span>
+                        </div>
+                        
+                        <h4>3.2 Service Improvement</h4>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Enhancement of alert detection accuracy</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>System performance optimization</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Development of new safety features</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="information-sharing">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <h3 class="privacy-section-title">4. Information Sharing</h3>
+                        </div>
+                        
+                        <p class="privacy-text">We share your information only with:</p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Your designated emergency contacts during alerts</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Verified security partners for emergency response</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Service providers essential to our operations</span>
+                        </div>
+                        
+                        <p class="privacy-text">
+                            We never sell your personal information to third parties or use it for advertising purposes.
+                        </p>
+                    </div>
+
+                    <div class="privacy-section" id="data-security">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3 class="privacy-section-title">5. Data Security</h3>
+                        </div>
+                        
+                        <p class="privacy-text">
+                            We implement robust security measures to protect your data, including:
+                        </p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>End-to-end encryption for sensitive data</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Secure data storage and transmission</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Regular security audits and updates</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Access controls and authentication measures</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="your-rights">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3 class="privacy-section-title">6. Your Rights</h3>
+                        </div>
+                        
+                        <p class="privacy-text">You have the right to:</p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Access your personal data</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Request data correction or deletion</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Opt out of certain data processing</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Export your data</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Withdraw consent for data processing</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="location-services">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="privacy-section-title">7. Location Services</h3>
+                        </div>
+                        
+                        <p class="privacy-text">
+                            Location tracking is essential for emergency response but you control how it's used:
+                        </p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Enable/disable location tracking</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Control background location access</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Manage location history settings</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Choose when to share location with contacts</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="emergency-alerts">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3 class="privacy-section-title">8. Emergency Alerts</h3>
+                        </div>
+                        
+                        <p class="privacy-text">
+                            When you trigger an alert through shake, pattern, or hold gestures:
+                        </p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Your location is shared with emergency contacts</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Security partners are notified if enabled</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Alert history is maintained for your safety</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="data-retention">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3 class="privacy-section-title">9. Data Retention</h3>
+                        </div>
+                        
+                        <p class="privacy-text">We retain your data for:</p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Account information: Until account deletion</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Alert history: 12 months for safety purposes</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Location history: 30 days by default</span>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="contact-us">
+                        <div class="privacy-section-header">
+                            <div class="privacy-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="privacy-section-title">10. Contact Us</h3>
+                        </div>
+                        
+                        <p class="privacy-text">
+                            For privacy-related inquiries or to exercise your rights:
+                        </p>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>Email: privacy@blinkalert.co.za</span>
+                        </div>
+                        <div class="privacy-bullet">
+                            <i class="fas fa-check-circle bullet-icon"></i>
+                            <span>In-app: Settings > Privacy Settings</span>
+                        </div>
+                        
+                        <div class="company-info">
+                            <p class="privacy-text">DotConnect Academy Pty Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="0.1" d="M0,256L48,240C96,224,192,192,288,186.7C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                                <!-- Eye shape with smoother curve -->
+                                <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                                <!-- Refined iris -->
+                                <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                                <!-- Refined target cross -->
+                                <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                                <!-- Center dot -->
+                                <circle cx="512" cy="512" r="15" fill="white"/>
+                                <!-- Symmetrical signal waves -->
+                                <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                    </div>
+                    <p>BlinkAlert provides peace of mind through innovative emergency alert solutions, keeping you connected when it matters most.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@blinkalert.co.za</li>
+                        <li><i class="fas fa-phone"></i> +27 76 957 5352</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlinkAlert. All rights reserved.</p>
+                <p class="company">DotConnect Academy Pty Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Toggle Functionality -->
+    <script>
+        // Dark/Light mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or respect OS preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && 
+             !localStorage.getItem('theme'))) {
+            body.classList.add('dark-theme');
+            themeToggle.checked = true;
+        }
+        
+        // Toggle theme when checkbox changes
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Privacy toggle switches
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click sound effect on toggle
+            const toggles = document.querySelectorAll('.consent-toggle input');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('change', function() {
+                    // You could add a subtle sound effect here
+                    console.log(`${this.id} toggle changed to: ${this.checked}`);
+                });
+            });
+            
+            // Smooth scroll for table of contents links
+            document.querySelectorAll('.toc-list a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Highlight active section in TOC
+                    document.querySelectorAll('.toc-list li').forEach(li => {
+                        li.style.borderLeftColor = 'transparent';
+                    });
+                    this.parentElement.style.borderLeftColor = 'var(--primary)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

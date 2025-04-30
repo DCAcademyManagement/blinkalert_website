@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - BlinkAlert</title>
+    <meta name="description" content="Explore the safety features of BlinkAlert - emergency alerts, real-time location sharing, and more.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts - Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Features Page Styles -->
+    <style>
+    /* ==========================================
+       Modern Features Page Styles for BlinkAlert
+       ========================================== */
+
+    /* Page Header Styles */
+    .page-header {
+        background: var(--primary-gradient);
+        color: white;
+        padding: var(--space-2xl) 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: var(--space-xl);
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .page-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='white' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        z-index: 0;
+    }
+
+    .page-title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: var(--space-md);
+        position: relative;
+        z-index: 1;
+        font-weight: 800;
+    }
+
+    .page-subtitle {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Feature Categories Navigation */
+    .feature-categories {
+        padding: var(--space-lg) 0 var(--space-2xl);
+    }
+
+    .category-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        margin-bottom: var(--space-xl);
+        position: sticky;
+        top: 80px;
+        z-index: 10;
+        background-color: var(--light);
+        padding: var(--space-md) 0;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        transition: background-color var(--transition-normal);
+    }
+
+    .dark-theme .category-nav {
+        background-color: var(--dark-blue);
+    }
+
+    .category-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-md);
+        color: var(--gray-dark);
+        text-decoration: none;
+        transition: all var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .category-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background: var(--primary-gradient);
+        transition: width var(--transition-normal);
+        border-radius: var(--radius-full);
+    }
+
+    .category-link i {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-2xs);
+        transition: transform var(--transition-normal);
+    }
+
+    .category-link span {
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .category-link:hover {
+        color: var(--primary);
+        transform: translateY(-3px);
+    }
+
+    .category-link:hover i {
+        transform: scale(1.1);
+    }
+
+    .category-link.active {
+        color: var(--primary);
+    }
+
+    .category-link.active::before {
+        width: 80%;
+    }
+
+    /* Feature Category Sections */
+    .feature-category {
+        margin-bottom: var(--space-2xl);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .feature-category.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .category-header {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        margin-bottom: var(--space-lg);
+    }
+
+    .category-icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-gradient);
+        border-radius: 20px;
+        color: white;
+        font-size: 2rem;
+        box-shadow: var(--shadow-primary);
+        transform: rotate(-5deg);
+    }
+
+    .category-header h2 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        margin-bottom: 0;
+        color: var(--dark);
+        transition: color var(--transition-normal);
+    }
+
+    .dark-theme .category-header h2 {
+        color: var(--white);
+    }
+
+    /* Feature Grid Layout */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
+    }
+
+    .feature-item {
+        background-color: var(--white);
+        border-radius: var(--radius-md);
+        padding: var(--space-lg);
+        box-shadow: var(--shadow-sm);
+        transition: all var(--transition-normal);
+        border: 1px solid var(--glass-border);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dark-theme .feature-item {
+        background-color: var(--dark-blue);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .feature-item:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .feature-item-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        margin-bottom: var(--space-md);
+        color: white;
+        font-size: 1.4rem;
+        box-shadow: var(--shadow-primary);
+        transition: transform var(--transition-normal);
+    }
+
+    .feature-item:hover .feature-item-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .feature-item-content {
+        flex: 1;
+    }
+
+    .feature-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: var(--space-sm);
+        color: var(--dark);
+        transition: color var(--transition-normal);
+    }
+
+    .dark-theme .feature-item h3 {
+        color: var(--white);
+    }
+
+    .feature-item p {
+        color: var(--gray-dark);
+        margin-bottom: 0;
+        transition: color var(--transition-normal);
+    }
+
+    /* Feature Showcase Styles */
+    .feature-showcase {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+        background-color: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: background-color var(--transition-normal);
+        border: 1px solid var(--glass-border);
+    }
+
+    .dark-theme .feature-showcase {
+        background-color: var(--dark-blue);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .showcase-image {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        min-height: 300px;
+    }
+
+    .showcase-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-normal);
+    }
+
+    .feature-showcase:hover .showcase-image img {
+        transform: scale(1.05);
+    }
+
+    .showcase-content {
+        padding: var(--space-xl);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .showcase-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: var(--space-md);
+        color: var(--dark);
+        transition: color var(--transition-normal);
+    }
+
+    .dark-theme .showcase-content h3 {
+        color: var(--white);
+    }
+
+    .showcase-content p {
+        color: var(--gray-dark);
+        margin-bottom: var(--space-md);
+        transition: color var(--transition-normal);
+    }
+
+    .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .feature-list li {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-sm);
+        color: var(--gray-dark);
+        transition: color var(--transition-normal);
+    }
+
+    .feature-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    .feature-list li i {
+        color: var(--secondary);
+        font-size: 1rem;
+    }
+
+    /* Feature Comparison Table */
+    .feature-comparison {
+        padding: var(--space-2xl) 0;
+        background-color: var(--light);
+        transition: background-color var(--transition-normal);
+    }
+
+    .dark-theme .feature-comparison {
+        background-color: var(--dark-blue);
+    }
+
+    .comparison-table {
+        background-color: var(--white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        margin-top: var(--space-xl);
+        transition: background-color var(--transition-normal);
+        border: 1px solid var(--glass-border);
+    }
+
+    .dark-theme .comparison-table {
+        background-color: var(--dark-blue);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .comparison-header {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        background-color: var(--primary-light);
+        padding: var(--space-lg) 0;
+        text-align: center;
+        transition: background-color var(--transition-normal);
+    }
+
+    .dark-theme .comparison-header {
+        background-color: rgba(52, 152, 219, 0.2);
+    }
+
+    .comparison-header .comparison-feature {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--space-md);
+    }
+
+    .comparison-header .comparison-plan {
+        padding: var(--space-md);
+        position: relative;
+    }
+
+    .comparison-plan h3 {
+        margin-bottom: var(--space-xs);
+        font-size: 1.4rem;
+        color: var(--dark);
+        transition: color var(--transition-normal);
+    }
+
+    .dark-theme .comparison-plan h3 {
+        color: var(--white);
+    }
+
+    .plan-price {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: var(--space-xs);
+        color: var(--primary);
+    }
+
+    .comparison-plan p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        color: var(--gray-dark);
+        transition: color var(--transition-normal);
+    }
+
+    .comparison-plan.featured {
+        background-color: rgba(52, 152, 219, 0.1);
+        transform: scale(1.05);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        z-index: 1;
+        transition: background-color var(--transition-normal);
+    }
+
+    .dark-theme .comparison-plan.featured {
+        background-color: rgba(52, 152, 219, 0.2);
+    }
+
+    .plan-tag {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--secondary-gradient);
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: var(--space-2xs) var(--space-sm);
+        border-radius: var(--radius-full);
+    }
+
+    .comparison-row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        text-align: center;
+        border-bottom: 1px solid var(--glass-border);
+        transition: border-color var(--transition-normal);
+    }
+
+    .dark-theme .comparison-row {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .comparison-row:last-of-type {
+        border-bottom: none;
+    }
+
+    .comparison-feature {
+        padding: var(--space-md);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 500;
+        color: var(--dark);
+        transition: color var(--transition-normal);
+        text-align: left;
+        padding-left: var(--space-lg);
+    }
+
+    .dark-theme .comparison-feature {
+        color: var(--white);
+    }
+
+    .comparison-row .comparison-plan {
+        padding: var(--space-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray-dark);
+        transition: color var(--transition-normal);
+    }
+
+    .comparison-row .comparison-plan.featured {
+        background-color: rgba(52, 152, 219, 0.05);
+        transition: background-color var(--transition-normal);
+    }
+
+    .dark-theme .comparison-row .comparison-plan.featured {
+        background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    .comparison-row .comparison-plan i.fa-check {
+        color: var(--secondary);
+        font-size: 1.2rem;
+    }
+
+    .comparison-row .comparison-plan i.fa-times {
+        color: var(--gray);
+        font-size: 1.2rem;
+    }
+
+    .comparison-actions {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: var(--space-lg) 0;
+        text-align: center;
+        background-color: var(--primary-light);
+        transition: background-color var(--transition-normal);
+    }
+
+    .dark-theme .comparison-actions {
+        background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    /* Smooth Scrolling and Section Highlighting */
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
+
+    /* Animations for Scrolling Sections */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design Adjustments */
+    @media (max-width: 992px) {
+        .feature-showcase {
+            grid-template-columns: 1fr;
+        }
+        
+        .showcase-image {
+            min-height: 250px;
+        }
+        
+        .showcase-content {
+            padding: var(--space-lg);
+        }
+        
+        .category-nav {
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding: var(--space-sm) var(--space-md);
+        }
+        
+        .category-link {
+            min-width: 140px;
+            white-space: nowrap;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .comparison-table {
+            overflow-x: auto;
+        }
+        
+        .comparison-header,
+        .comparison-row,
+        .comparison-actions {
+            min-width: 700px;
+        }
+        
+        .feature-item-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .feature-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .category-nav {
+            gap: var(--space-xs);
+        }
+        
+        .category-link {
+            min-width: 100px;
+            padding: var(--space-xs) var(--space-sm);
+        }
+        
+        .page-header {
+            padding: var(--space-xl) 0;
+        }
+    }
+
+    /* JavaScript Functionality Support */
+    .feature-category:target {
+        animation: fadeInUp 0.8s forwards;
+    }
+
+    /* Anchor scrolling highlight */
+    :target {
+        scroll-margin-top: 120px;
+    }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-glow"></div>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                            <!-- Eye shape with smoother curve -->
+                            <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                            <!-- Refined iris -->
+                            <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                            <!-- Refined target cross -->
+                            <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                            <!-- Center dot -->
+                            <circle cx="512" cy="512" r="15" fill="white"/>
+                            <!-- Symmetrical signal waves -->
+                            <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="features.html" class="nav-link active">Features</a></li>
+                    <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                    <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="mode-toggle">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                    <label for="theme-toggle" class="toggle-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cta-button">
+                    <a href="#download" class="btn primary-btn">Get the App</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="close-menu">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html" class="active">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="#download" class="btn primary-btn">Download App</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">All <span class="gradient-text">Features</span></h1>
+                <p class="page-subtitle">Discover how BlinkAlert empowers you with innovative safety tools designed for peace of mind.</p>
+            </div>
+        </section>
+
+        <section class="feature-categories">
+            <div class="container">
+                <div class="category-nav">
+                    <a href="#emergency-alerts" class="category-link active">
+                        <i class="fas fa-bell"></i>
+                        <span>Emergency Alerts</span>
+                    </a>
+                    <a href="#location-tracking" class="category-link">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Location Tracking</span>
+                    </a>
+                    <a href="#privacy-control" class="category-link">
+                        <i class="fas fa-shield"></i>
+                        <span>Privacy Control</span>
+                    </a>
+                    <a href="#multiple-triggers" class="category-link">
+                        <i class="fas fa-hand"></i>
+                        <span>Multiple Triggers</span>
+                    </a>
+                </div>
+
+                <div class="feature-category visible" id="emergency-alerts">
+                    <div class="category-content">
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Real-time Location</h3>
+                                    <p>Share your real-time location with trusted contacts during emergencies.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-route"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Journey Tracking</h3>
+                                    <p>Set up automatic journey tracking for specific trips where you'd like extra safety monitoring.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-history"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Location History</h3>
+                                    <p>Access your location history during emergencies to provide a complete picture of your movements.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Temporary Sharing</h3>
+                                    <p>Share your location temporarily with expiration periods you control.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-showcase">
+                            <div class="showcase-content">
+                                <h3>Precision Location Services</h3>
+                                <p>Our advanced location tracking system uses a combination of GPS, cellular networks, and WiFi positioning to provide the most accurate location information possible.</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> High precision coordinates</li>
+                                    <li><i class="fas fa-check"></i> Battery-efficient tracking</li>
+                                    <li><i class="fas fa-check"></i> Indoor location estimation</li>
+                                    <li><i class="fas fa-check"></i> Offline location caching</li>
+                                </ul>
+                            </div>
+                            <div class="showcase-image">
+                                <img src="/api/placeholder/600/400" alt="Location Tracking Interface" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-category" id="privacy-control">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-shield"></i>
+                        </div>
+                        <h2>Privacy Control</h2>
+                    </div>
+                    <div class="category-content">
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Granular Permissions</h3>
+                                    <p>Control exactly what data is collected and when it's shared on a contact-by-contact basis.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Data Retention Controls</h3>
+                                    <p>Set how long your location history and other data is stored before automatic deletion.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Data Export</h3>
+                                    <p>Export your data in a standard format at any time to maintain control of your information.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>One-Click Deletion</h3>
+                                    <p>Remove all your personal data with a single action when you no longer need it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-showcase">
+                            <div class="showcase-image">
+                                <img src="/api/placeholder/600/400" alt="Privacy Control Interface" />
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Privacy-First Design</h3>
+                                <p>BlinkAlert is built with privacy at its core. Our approach ensures you maintain complete control of your data while still providing the safety features you need.</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> End-to-end encryption</li>
+                                    <li><i class="fas fa-check"></i> Local data processing when possible</li>
+                                    <li><i class="fas fa-check"></i> Transparent data usage policies</li>
+                                    <li><i class="fas fa-check"></i> Regular privacy audits</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-category" id="multiple-triggers">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-hand"></i>
+                        </div>
+                        <h2>Multiple Triggers</h2>
+                    </div>
+                    <div class="category-content">
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Shake Activation</h3>
+                                    <p>Quickly trigger an alert by shaking your phone with configurable sensitivity.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-fingerprint"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Pattern Press</h3>
+                                    <p>Set up a custom pattern of button presses to trigger an alert discreetly.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Voice Command</h3>
+                                    <p>Activate alerts using customizable voice commands even when your phone is locked.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-stopwatch"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Timer Alerts</h3>
+                                    <p>Set safety timers that automatically trigger alerts if you don't check in.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-showcase">
+                            <div class="showcase-content">
+                                <h3>Flexible Alert Triggers</h3>
+                                <p>BlinkAlert provides multiple ways to activate emergency responses, ensuring you can always reach out for help regardless of the situation.</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> Customizable sensitivity</li>
+                                    <li><i class="fas fa-check"></i> Trigger combinations</li>
+                                    <li><i class="fas fa-check"></i> False alarm prevention</li>
+                                    <li><i class="fas fa-check"></i> Quick cancelation options</li>
+                                </ul>
+                            </div>
+                            <div class="showcase-image">
+                                <img src="/api/placeholder/600/400" alt="Multiple Trigger Options" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-comparison">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Feature Comparison</span>
+                    <h2 class="section-title">Compare <span class="gradient-text">Plan Features</span></h2>
+                    <p class="section-subtitle">See which BlinkAlert plan is right for you</p>
+                </div>
+                
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="comparison-feature"></div>
+                        <div class="comparison-plan">
+                            <h3>Free</h3>
+                            <div class="plan-price">R0</div>
+                            <p>Basic safety features</p>
+                        </div>
+                        <div class="comparison-plan featured">
+                            <div class="plan-tag">Most Popular</div>
+                            <h3>Premium</h3>
+                            <div class="plan-price">R110</div>
+                            <p>Complete safety suite</p>
+                        </div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Emergency Contacts</div>
+                        <div class="comparison-plan">1 Contact</div>
+                        <div class="comparison-plan featured">6 Contacts</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Alert Methods</div>
+                        <div class="comparison-plan">Basic Alert</div>
+                        <div class="comparison-plan featured">All Trigger Methods</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Location History</div>
+                        <div class="comparison-plan">24 Hours</div>
+                        <div class="comparison-plan featured">30 Days</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Offline Mode</div>
+                        <div class="comparison-plan"><i class="fas fa-times"></i></div>
+                        <div class="comparison-plan featured"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Audio/Photo Capture</div>
+                        <div class="comparison-plan"><i class="fas fa-times"></i></div>
+                        <div class="comparison-plan featured"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Journey Tracking</div>
+                        <div class="comparison-plan"><i class="fas fa-times"></i></div>
+                        <div class="comparison-plan featured"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">SafeWord System</div>
+                        <div class="comparison-plan"><i class="fas fa-times"></i></div>
+                        <div class="comparison-plan featured"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="comparison-actions">
+                        <div class="comparison-feature"></div>
+                        <div class="comparison-plan">
+                            <a href="#download" class="btn outline-btn">Download Free</a>
+                        </div>
+                        <div class="comparison-plan featured">
+                            <a href="#download" class="btn primary-btn">Get Premium</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-bg"></div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="section-title">Ready to feel safer?</h2>
+                    <p class="section-subtitle">Download BlinkAlert today and get peace of mind for you and your loved ones.</p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="btn primary-btn">
+                            <span class="btn-content">
+                                <i class="fas fa-download"></i>
+                                <span>Get Started</span>
+                            </span>
+                        </a>
+                        <a href="contact.html" class="btn outline-btn light">
+                            <span class="btn-content">
+                                <i class="fas fa-headset"></i>
+                                <span>Contact Support</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download" id="download">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Get Started</span>
+                    <h2 class="section-title">Download <span class="gradient-text">BlinkAlert</span> Today</h2>
+                    <p class="section-subtitle">Available for Android devices. iOS coming soon.</p>
+                </div>
+                <div class="download-options">
+                    <div class="download-app">
+                        <div class="download-buttons">
+                            <a href="#" class="store-button google-play">
+                                <i class="fab fa-google-play"></i>
+                                <div class="store-text">
+                                    <span class="small-text">GET IT ON</span>
+                                    <span class="big-text">Google Play</span>
+                                </div>
+                            </a>
+                            <a href="#" class="store-button app-store disabled">
+                                <i class="fab fa-apple"></i>
+                                <div class="store-text">
+                                    <span class="small-text">COMING SOON TO</span>
+                                    <span class="big-text">App Store</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="download-qr">
+                        <div class="qr-code">
+                            <img src="/api/placeholder/180/180" alt="QR Code to download BlinkAlert" />
+                        </div>
+                        <p>Scan QR code to download</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="0.1" d="M0,256L48,240C96,224,192,192,288,186.7C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="logo-svg">
+                                <!-- Eye shape with smoother curve -->
+                                <path d="M205 512 C205 512, 512 205, 819 512 C819 512, 512 819, 205 512 Z" fill="#3498db" stroke="#2980b9" stroke-width="24"/>
+                                <!-- Refined iris -->
+                                <circle cx="512" cy="512" r="140" fill="#2ecc71"/>
+                                <!-- Refined target cross -->
+                                <path d="M512 452 L512 572 M452 512 L572 512" stroke="white" stroke-width="20" stroke-linecap="round"/>
+                                <!-- Center dot -->
+                                <circle cx="512" cy="512" r="15" fill="white"/>
+                                <!-- Symmetrical signal waves -->
+                                <path d="M150 512 Q220 362 320 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M874 512 Q804 362 704 362" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M205 512 Q275 412 355 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                                <path d="M819 512 Q749 412 669 412" fill="none" stroke="#2ecc71" stroke-width="24"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Blink<span class="accent">Alert</span></span>
+                    </div>
+                    <p>BlinkAlert provides peace of mind through innovative emergency alert solutions, keeping you connected when it matters most.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@blinkalert.co.za</li>
+                        <li><i class="fas fa-phone"></i> +27 76 957 5352</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlinkAlert. All rights reserved.</p>
+                <p class="company">DotConnect Academy Pty Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactive features -->
+    <script>
+        // Dark/Light mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or respect OS preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && 
+             !localStorage.getItem('theme'))) {
+            body.classList.add('dark-theme');
+            themeToggle.checked = true;
+        }
+        
+        // Toggle theme when checkbox changes
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Feature category navigation
+        const categoryLinks = document.querySelectorAll('.category-link');
+        const featureCategories = document.querySelectorAll('.feature-category');
+        
+        // Make all categories visible on page load with a staggered delay
+        window.addEventListener('DOMContentLoaded', function() {
+            featureCategories.forEach((category, index) => {
+                setTimeout(() => {
+                    category.classList.add('visible');
+                }, 100 * index);
+            });
+        });
+        
+        // Update active category link on scroll
+        window.addEventListener('scroll', function() {
+            let currentSection = '';
+            
+            featureCategories.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            categoryLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scroll for category navigation
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 120,
+                    behavior: 'smooth'
+                });
+                
+                // Update active class
+                categoryLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Create cursor glow effect
+        const cursorGlow = document.querySelector('.cursor-glow');
+        
+        document.addEventListener('mousemove', function(e) {
+            cursorGlow.style.display = 'block';
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
+        
+        document.addEventListener('mouseout', function() {
+            cursorGlow.style.display = 'none';
+        });
+    </script>
+</body>
+</html>header">
+                        <div class="category-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h2>Emergency Alerts</h2>
+                    </div>
+                    <div class="category-content">
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Instant Notifications</h3>
+                                    <p>Send immediate alerts to your emergency contacts with your precise location when you're in danger.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-mobile-screen"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Cross-Platform Alerts</h3>
+                                    <p>Alerts are delivered via app notifications, SMS, and email to ensure your contacts receive them.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Offline Mode</h3>
+                                    <p>Even without an internet connection, BlinkAlert can queue emergency alerts to send when connectivity returns.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-item-icon">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <div class="feature-item-content">
+                                    <h3>Photo & Audio Capture</h3>
+                                    <p>Automatically captures photos and audio during emergencies to provide additional context.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-showcase">
+                            <div class="showcase-image">
+                                <img src="/api/placeholder/600/400" alt="Emergency Alert Interface" />
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Advanced Alert System</h3>
+                                <p>BlinkAlert's emergency notification system is designed with one goal in mind: getting you help as quickly as possible when you need it most.</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> Customizable alert messages</li>
+                                    <li><i class="fas fa-check"></i> Delivery confirmation</li>
+                                    <li><i class="fas fa-check"></i> Auto-escalation if no response</li>
+                                    <li><i class="fas fa-check"></i> Location history tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-category" id="location-tracking">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <h2>Location Tracking</h2>
+                    </div>
+                    <div class="category-
